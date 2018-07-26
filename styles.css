@@ -1,0 +1,340 @@
+
+*
+{
+margin: 0px;
+padding: 0px;
+}
+
+a:link {
+	color: #6C2A1A;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #FF0000;
+}
+
+a:visited {
+	color: #6C2A1A;
+}
+
+body {
+	
+	background: #6A8B1A url(images/back_all.jpg);
+	font: 14px Arial, Helvetica, sans-serif;
+	color: #383838;
+}
+
+#content
+{
+	width: 778px;
+	margin: 0px auto;
+}
+
+#main
+{
+width: 791px;
+padding: 10px;
+padding-top: 10px;
+background: url(images/table_top.gif) no-repeat top;
+}
+
+#table_back
+{
+background: url(images/table_back.gif) repeat-y;
+}
+
+#back
+{
+width: 811px;
+}
+
+#header {
+	height: 148px;
+	text-align: right;
+		
+}
+
+#logo {
+
+width: 791px;
+height: 58px;
+text-align: left;
+padding-left: 20px;
+padding-top: 10px;
+background: url(images/header.png) no-repeat;
+}
+
+
+#logo a {
+	text-decoration: none;
+	font-style: arial;
+	font-size: 24px;
+	color: #ffffff;
+}
+#logo H2 a
+{
+font-size: 22px;
+}
+
+
+#menu
+{
+width: 771px;
+height: 39px;
+padding-left: 40px;
+padding-top: 41px
+}
+
+#menu ul {
+	list-style: none;	
+}
+
+#menu li {
+	
+	display: inline; 
+	
+}
+
+#menu a {
+	float: left;
+	width: 138px;
+	height: 29px;
+    display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+	padding-top: 10px;
+	text-transform: uppercase;
+	background: url(images/menu.png) no-repeat;
+}
+
+#menu a:hover {
+	width: 138px;
+    height: 35px;
+	margin-top: -6px;
+	padding-top: 10px;
+	color: #DEEBBC;
+	text-decoration: underline;
+	background: url(images/menu_r.png) no-repeat;
+}
+
+
+
+
+#right
+{
+	width: 249px;
+	float: right;
+}
+
+#right H3
+{
+width: 224px;
+height: 23px;
+font-size: 14px;
+font-weight: bold;
+padding-left: 25px;
+padding-top: 10px;
+text-transform: uppercase;
+color: #6C2A1A;
+background: #EFE1CE;
+border-top: 5px solid #C28675;
+}
+
+#right ul {
+	list-style: none;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+#right .right_back
+{
+background: #EFE1CE;
+}
+
+#right .right_bottom
+{
+background: url(images/right_bottom.gif) no-repeat bottom;
+padding-bottom: 30px;
+margin-bottom: 10px;
+}
+
+#right li  {
+	padding: 7px;
+	padding-left: 10px;
+
+}
+
+#right .sub
+{
+	padding-left: 30px;
+}
+
+#right a {
+	color: #6C2A1A;
+}
+#right a:visited {
+	color: #6C2A1A;
+}
+
+#right p
+{
+font-size: 10px;
+padding-left: 10px;
+}
+
+.bot
+{
+padding: 10px;
+}
+
+#calendar {
+  width: 100%;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+  }
+#calendar thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendar thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+#calendar thead tr:nth-child(1) td:nth-child(1):hover, #calendar thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar tbody td {
+  color: rgb(44, 86, 122);
+}
+#calendar tbody td:nth-child(n+6), #calendar .holiday {
+  color: rgb(231, 140, 92);
+}
+#calendar tbody td.today {
+  background: rgb(220, 0, 0);
+  color: #fff;
+}
+
+
+#left
+{
+width: 513px;
+}
+
+#left .left_top
+{
+background: url(images/left_top.gif) repeat-x;
+padding-top: 10px;
+}
+
+
+#left .left_bottom
+{
+background: url(images/left_bottom.gif) repeat-x bottom;
+padding: 10px;
+padding-bottom: 20px;
+margin-bottom: 20px;
+}
+#left .zmist 
+{
+	margin: 3px;
+	padding: 5px;
+	font-size: 14px;
+	color: #6C2A1A;
+	
+}
+
+
+
+#left a:hover {
+    color: #800000; 
+    text-decoration: underline;
+   }
+#left H1
+{
+	margin: 3px;
+	padding: 3px;
+	font-size: 18px;
+	color: #6C2A1A;
+	
+}
+#left H4
+{
+	margin: 0px;
+	padding: 10px;
+	font-size: 16px;
+	color: #6C2A1A;
+}
+
+#left a
+{
+color: #6C2A1A;
+text-decoration: none;
+}
+
+#left p {
+	margin: 5px;
+	padding: 4px;
+	line-height: 1.5;
+}
+
+#left h2 {
+	margin: 5px;
+	padding: 0;
+	padding-top: 5px;
+	color: #6C2A1A;
+}
+
+#left ol, #left ul
+{
+margin-left: 30px;
+}
+.theleft {
+	
+	float: left; 
+    margin: 10px 20px 7px 7px; 
+	
+}
+.rightshow
+{
+	
+	float: right; 
+    margin: 15px 10px 10px 20px; 
+	
+}
+.date {
+	text-align: right;
+	color: #6C2A1A;
+	font-size: 11px;
+margin-top: 10px;
+}
+
+.date a {
+	color: #6C2A1A;
+
+}
+
+
+
+
+#footer {
+	height: 44px;
+	clear: both;
+	padding-top: 30px;
+	background: url(images/footer.png) repeat-x top;
+}
+
+#footer p {
+	margin: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #4A2011;
+}
+
+#footer a {
+	color: #4A2011;
+}
