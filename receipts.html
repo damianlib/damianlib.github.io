@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Дем'янівська школа. Бібліотека</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+<div id="content">
+<div id="back">
+<!-- header begins -->
+<div id="header"> 
+	<div id="menu">
+		<ul>
+			<li id="button1"><a href="index.html" title="">Головна</a></li>
+			<li id="button2"><a href="about.html" title="">Про бібліотеку</a></li>
+			<li id="button3"><a href="doc.html" title="">Документи</a></li>
+			<li id="button4"><a href="int-rec.html" title="">Інтернет-ресурси</a></li>
+			<li id="button5"><a href="cont.html" title="">Контакти</a></li>
+		</ul>
+  </div>
+	<div id="logo">
+		<h1><a>Дем'янівська загальноосвітня школа І-ІІІ ступенів. Бібліотека</a></h1>
+		<h2><a>Нові надходження</a></h2>
+	</div>
+  
+</div>
+
+<!-- header ends -->
+<!-- content begins -->
+<div id="table_back">
+ <div id="main">
+	<div id="right">		  			
+			<h3><a href="receipts.html" title="">Нові надходження</a></h3>
+			<div class="right_back">	
+		    <div class="right_bottom">
+			<ul>
+					<li class="sub"><a href="receipts.html#dara" alt = "Дара Корній Чарівні істоти українського міфу. Духи природи">Дара Корній "Чарівні істоти...</a></li>
+					<li class="sub"><a href="receipts.html#galaii">Володимир Галайчук "Укра...</a></li>
+					<li class="sub"><a href="receipts.html#pagu">Галина  Пагутяк  "Слуга з До...</a></li>
+							
+	        </ul>
+		    </div>
+		  </div>	
+			<h3>Останні новини</h3>
+			<div class="right_back">	
+		    <div class="right_bottom">
+			<ul>
+			  <li>
+				  <h4>June 2, 2008</h4>
+				  <p><a href="#"> Duis tempor posuere diam. Suspendisse vel tellus quis nunc malesuada porta. &#8230;</a></p></li>
+				   <li>
+				  <h4>June 12, 2008</h4>
+				  <p><a href="#">Tempus Duis tempor posuere diam. Suspendisse vel tellus quis nunc malesuada porta. &#8230;</a></p></li>
+				  </ul>
+		  </div>
+		  </div>
+		 
+<div class="right_back">	
+<div class="right_bottom">
+<div align=center>
+<div style="width:220px;  solid #c0c0c0; padding:6px;">
+<table id="calendar"  border="0" cellspacing="0" cellpadding="1">
+  <thead>
+    <tr><td><b>‹</b><td colspan="5"><td><b>›</b>
+    <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Нд
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+</div>
+
+<script>
+function calendar(id, year, month) {
+var Dlast = new Date(year,month+1,0).getDate(),
+    D = new Date(year,month,Dlast),
+    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+    calendar = '<tr>',
+    month=["Січень "," Лютий "," Березень "," Квітень "," Травень "," Червень "," Липень "," Серпень "," Вересень "," Жовтень ","Листопад"," Грудень " ];
+if (DNfirst != 0) { 
+  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+}else{
+  for(var  i = 0; i < 6; i++) calendar += '<td>';
+}
+for(var  i = 1; i <= Dlast; i++) {
+  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+    calendar += '<td class="today">' + i;
+  }else{
+    calendar += '<td>' + i;
+  }
+  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+    calendar += '<tr>';
+  }
+}
+for(var  i = DNlast; i < 7; i++) calendar += '<td> ';
+document.querySelector('#'+id+' tbody').innerHTML = calendar;
+document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+    document.querySelector('#'+id+' tbody').innerHTML += '<tr><td> <td> <td> <td> <td> <td> <td> ';
+}
+}
+calendar("calendar", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+  calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+  calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month)+1);
+}
+</script>
+			
+				
+					
+						</tbody>
+					</table>
+				</div>
+		  </div>
+		 </div>
+	 
+	<div id="left">		
+				<div class="left_top">
+				  <div class="left_bottom">
+	<h4><a name="dara">Дара Корній "Чарівні істоти українського міфу. Духи природи"</a></h4>
+		 <a  href="images/darakorny.jpg" target="_blank">
+		 <img class="theleft" src="images/darakorny.jpg" width="200"/> </a>
+	<p align="justify">Ця книжка — чарівна. Ви не просто погортаєте її сторінки — ви поблукаєте стежками правічного лісу, почуєте його дихання, 
+	подивитесь в очі старенькому лісовикові, послухаєте чугайстрову сопілку. Може, вам щось прошепоче мавка або побалакає з вами поважний цар 
+	Ох… Ви постоїте біля річки — заскочите русалок за їхніми пустощами, а звідти недалеко й на гостину до суворих болотяника й болотяниці. 
+	А далі — прогулянка полем і луками, де вас зустрінуть і польовик, і спориш, і луговик… Та й вітри з повітрулями супроводжуватимуть вас під час мандрівки. 
+	І насамкінець свої таємниці відкриють духи пір року. Перед вами постане величезний і дуже цікавий шар культурної спадщини давніх українців, 
+	химерний світ чарівних істот праукраїнської міфології, досліджений і опрацьований Дарою Корній.</p>
+<a  href="images/images.jpg" target="_blank">
+	<img src="images/images.jpg" width="280" /></a>
+	 <a  href="images/341.png" target="_blank">
+	 <img src="images/341.png" width="180" /></a>
+	<p class="date"><img src="images/timeicon.gif" alt="" /> 22 травня 2018</p>
+	        </div>
+				</div>
+			
+			<div class="left_top">
+				  <div class="left_bottom">
+	<h4><a name="galaii">Володимир Галайчук "Українська міфологія"</a></h4>
+	<a  href="images/galaii.jpg" target="_blank">
+	<img class ="rightshow" src="images/galaii.jpg" width="200" /></a>
+	<p align="justify">На сторінках цієї книжки постають легенди про потерчат і мавок, чортів і русалок
+ Українці населяли дивними істотами хату і хлів, подвір’я, поле і ліс. У такий спосіб наші предки складали уявлення про Всесвіт 
+ і визначали місце людини в ньому. Ви поринете в багатий і цікавий, пов­ний переказів і легенд світ української міфології! 
+ І раптом може здатися, що то не старі половиці скриплять, а тихо крадеться домовик, серед темних водоростей блисне зелене пасмо русалчиного волосся,
+ а з темного лісу долине моторошне виття вовкулаки… Джерельну основу видання здебільшого склали етнографічні матеріали автора з Полісся, Волині, Бойківщини, 
+ Гуцульщини та Покуття. Для увиразнення образів персонажів і розширення географії дослідження залучено й записи студентів та аспірантів кафедри етнології історичного 
+ факультету ЛНУ ім. Івана Франка, а також уже опубліковані матеріали Павла Чубинського, Володимира Гнатюка, Володимира Шухевича, Людмили Виноградової та інших.
+
+</p> 	
+ <a  href="images/galaii2.jpg" target="_blank">
+	 <img src="images/galaii2.jpg" width="500" /></a>
+	
+
+	<p class="date"><img src="images/timeicon.gif" alt="" /> 18 травня 2018</p>
+	        </div>
+				</div>
+		<div class="left_top">
+				  <div class="left_bottom">
+	<h4><a name="pagu">Галина Пагутяк "Слуга з Добромиля"</a></h4>
+	<a  href="images/pagu.gif" target="_blank">
+	<img class ="theleft" src="images/pagu.gif" width="200" /></a>
+	<p align="justify">В окрузі старовинного галицького містечка Добромиль в часи середньовіччя у вдови, яку вважають відьмою, 
+	народжується син. «Байстрюк!» – зневажливо називають хлопчика односельці поміж себе, однак насправді він є дхампіром (сином мертвого опиря і відьми), 
+	істотою іншої раси з особливими магічними властивостями. Саме йому протягом 800 років в різні історичні епохи доведеться стати для добромильської землі 
+	опікуном і захисником. За книгу «Слуга з Добромиля» автор, Галина Пагутяк, яку називають наймістичнішою письменницею України, стала лауреатом Шевченківської премії 2010 року.
+</p> 	
+ <a  href="images/obro.jpg" target="_blank">
+	 <img src="images/obro.jpg" width="230" /></a>
+	<a  href="images/obro2.jpg" target="_blank">
+	 <img src="images/obro2.jpg" width="204" /></a>
+
+	<p class="date"><img src="images/timeicon.gif" alt="" /> 18 травня 2018</p>
+	        </div>
+				</div>
+	
+	</div>
+	<div style="clear: both;"></div>
+<!--content ends -->
+<!--footer begins -->
+	</div>
+</div>
+<div id="footer">
+
+	</div>
+</div>
+</div>
+<!-- footer ends-->
+</body>
+</html>
